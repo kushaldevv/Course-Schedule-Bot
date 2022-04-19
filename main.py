@@ -62,5 +62,7 @@ async def on_message(message):
           if user[2:20] == str(message.author.id):
             out += "Notify for " + courses + '\n'
       await channel.send(out) if len(out) > 0 else await channel.send("None")
+    elif 'cock' in msg or 'penis' in msg or 'dick' in msg or 'erika' in msg or 'tranny' in msg or 'trans' in msg:
+      await channel.send('https://tenor.com/view/toy-dick-boner-sex-toy-dick-penis-toy-gif-20447370')
       
 client.run('OTYzODk0MzI3Njk0NzM3NDY5.YlcujA.UFwi9_lAxh9TYzVKXtREJRgs0ZU')
