@@ -64,5 +64,7 @@ async def on_message(message):
       await channel.send(out) if len(out) > 0 else await channel.send("None")
     elif 'cock' in msg or 'penis' in msg or 'dick' in msg or 'erika' in msg or 'tranny' in msg or 'trans' in msg:
       await channel.send('https://tenor.com/view/toy-dick-boner-sex-toy-dick-penis-toy-gif-20447370')
+    elif 'ryan' in msg or 'colossal' in msg or 'fortnite' in msg:
+        await channel.send('https://cdn.discordapp.com/attachments/960762579968475146/965823380832018432/video0.mov')
       
 client.run('OTYzODk0MzI3Njk0NzM3NDY5.YlcujA.UFwi9_lAxh9TYzVKXtREJRgs0ZU')
