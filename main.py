@@ -8,7 +8,6 @@ data['960978831638949948']['cmsc420 0401'] = ['<@120992169539534848>']
 data['960978831638949948']['cmsc420 0101'] = ['<@120992169539534848>']
 data['960978831638949948']['cmsc420 0201'] = ['<@120992169539534848>']
 data['960978831638949948']['cmsc320 0201'] = ['<@120992169539534848>']
-data['960978831638949948']['cmsc320 0101'] = ['<@120992169539534848>']
 data['960978831638949948']['cmsc389T 0101'] = ['<@120992169539534848>']
 data['960978831638949948']['cmsc388J 0101'] = ['<@120992169539534848>']
 
@@ -68,5 +67,9 @@ async def on_message(message):
       await channel.send('https://tenor.com/view/toy-dick-boner-sex-toy-dick-penis-toy-gif-20447370')
     elif 'ryan' in msg or 'colossal' in msg or 'fortnite' in msg:
         await channel.send('https://cdn.discordapp.com/attachments/960762579968475146/965823380832018432/video0.mov')
+    elif 'best' in msg or 'waifu' in msg or 'manga' in msg or 'episode' in msg or 'season' in msg:
+        await channel.send('https://tenor.com/view/makise-kirusu-gif-21154482')
+    elif 'science' in msg or 'cool' in msg or 'steins' in msg or 'bitch' in msg or 'anime' in msg:
+        await channel.send('https://tenor.com/view/steins-gif-18331409')
       
 client.run('OTYzODk0MzI3Njk0NzM3NDY5.YlcujA.38sRAI7qwRaQ7MXY_4BPU7x0xxM')
