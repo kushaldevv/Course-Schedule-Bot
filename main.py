@@ -1,6 +1,5 @@
-import discord, re, retrieve, json, os
+import discord, re, retrieve, json
 from discord.ext import tasks
-from uptime import keep_alive
 
 client = discord.Client()
 
@@ -64,5 +63,4 @@ async def on_message(message):
             out += "Notify for " + courses + '\n'
       await channel.send(out) if len(out) > 0 else await channel.send("None")
       
-keep_alive()
-client.run(os.environ['TOKEN'])
+client.run('OTYzODk0MzI3Njk0NzM3NDY5.YlcujA.UFwi9_lAxh9TYzVKXtREJRgs0ZU')
