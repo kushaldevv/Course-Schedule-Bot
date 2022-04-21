@@ -17,7 +17,7 @@ data['960978831638949948']['cmsc388J 0101'] = ['<@120992169539534848>']
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
-    @tasks.loop(minutes=8)
+    @tasks.loop(minutes= 2)
     async def noti_check():
         for channels in data:
             for courses in data[channels]:
