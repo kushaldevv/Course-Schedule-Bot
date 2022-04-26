@@ -41,7 +41,7 @@ async def on_message(message):
     msg = message.content
     channel = message.channel
     # channel_id = str(channel.id)
-    course_re = (re.search(r'^!course ([\w]+[\d]+)$', msg))
+    course_re = (re.search(r'^!course ([\w]+[\d]+\w?)$', msg))
     # notify_re = (re.search(r'^!notify ([\w\d]+) ([\w\d]+)$', msg))
     if course_re:
         for sections in retrieve.sections(course_re.group(1).lower()):
