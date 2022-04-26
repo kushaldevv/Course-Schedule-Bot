@@ -57,5 +57,5 @@ def sections(course):
                 info = "Lecture: " + l_building + l_days + l_time + d_building + d_days + d_time
                 out.append(section_id + prof + info + '\n' + total_seats + ', ' + open_seats + ', ' + wait_list + '\n\n')
     except:
-        return ["invalid Course"]
+        return ["Invalid course/not in this shitty api"]
     return out
