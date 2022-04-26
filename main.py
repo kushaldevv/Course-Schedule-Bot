@@ -29,9 +29,6 @@ async def on_ready():
         if retrieve.validSection("CMSC420", "0201") == [True, "has open seats"]:
             channel = client.get_channel(960978831638949948)
             await channel.send("<@120992169539534848> Open seat/s in " + "CMSC420 0201")
-        if retrieve.validSection("CMSC420", "0301") == [True, "has open seats"]:
-            channel = client.get_channel(960978831638949948)
-            await channel.send("<@120992169539534848> Open seat/s in " + "CMSC420 0301")
         if retrieve.validSection("CMSC420", "0401") == [True, "has open seats"]:
             channel = client.get_channel(960978831638949948)
             await channel.send("<@120992169539534848> Open seat/s in " + "CMSC420 0401")
@@ -43,9 +40,9 @@ async def on_message(message):
         return
     msg = message.content
     channel = message.channel
-    channel_id = str(channel.id)
+    # channel_id = str(channel.id)
     course_re = (re.search(r'^!course ([\w]+[\d]+)$', msg))
-    notify_re = (re.search(r'^!notify ([\w\d]+) ([\w\d]+)$', msg))
+    # notify_re = (re.search(r'^!notify ([\w\d]+) ([\w\d]+)$', msg))
     if course_re:
         for sections in retrieve.sections(course_re.group(1).lower()):
             await channel.send(sections)
