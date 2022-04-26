@@ -9,18 +9,34 @@ data['960978831638949948'] = {}
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
-    @tasks.loop(minutes= 2)
-    async def noti_check():
-        for channels in data:
-            for courses in data[channels]:
-                arr = courses.split(' ')
-                if retrieve.validSection(arr[0], arr[1]) == [True, "has open seats"]:
-                    channel = client.get_channel(int(channels))
-                    for users in data[channels][courses]:
-                        await channel.send(users + " Open seat/s in " + courses)
-                    data[channels][courses].clear()
-    noti_check.start()
+    # @tasks.loop(minutes= 2)
+    # async def noti_check():
+    #     for channels in data:
+    #         for courses in data[channels]:
+    #             arr = courses.split(' ')
+    #             if retrieve.validSection(arr[0], arr[1]) == [True, "has open seats"]:
+    #                 channel = client.get_channel(int(channels))
+    #                 for users in data[channels][courses]:
+    #                     await channel.send(users + " Open seat/s in " + courses)
+    #                 data[channels][courses].clear()
+    # noti_check.start()
 
+    @tasks.loop(minutes = 2)
+    async def noti_check():
+        if retrieve.validSection("CMSC420", "0101") == [True, "has open seats"]:
+            channel = client.get_channel(960978831638949948)
+            await channel.send("<@120992169539534848> Open seat/s in " + "CMSC420 0101")
+        if retrieve.validSection("CMSC420", "0201") == [True, "has open seats"]:
+            channel = client.get_channel(960978831638949948)
+            await channel.send("<@120992169539534848> Open seat/s in " + "CMSC420 0201")
+        if retrieve.validSection("CMSC420", "0301") == [True, "has open seats"]:
+            channel = client.get_channel(960978831638949948)
+            await channel.send("<@120992169539534848> Open seat/s in " + "CMSC420 0301")
+        if retrieve.validSection("CMSC420", "0401") == [True, "has open seats"]:
+            channel = client.get_channel(960978831638949948)
+            await channel.send("<@120992169539534848> Open seat/s in " + "CMSC420 0401")
+    noti_check.start()
+ 
 @client.event
 async def on_message(message):
     if message.author == client.user:
