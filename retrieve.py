@@ -8,7 +8,6 @@ def exists(data, target):
     return True
 def validSection(course_name, sec):
     try:
-    #change termId to year+08 for fall, year+12 for winter, year+01 for spring, year+05 for summer
         url = "https://app.testudo.umd.edu/soc/search?courseId=" + course_name + "&sectionId=" + sec + "&termId=202208&_openSectionsOnly=on&creditCompare=&credits=&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on"
         html_text = requests.get(url).text
         soup = BeautifulSoup(html_text, 'html.parser')
@@ -18,15 +17,7 @@ def validSection(course_name, sec):
         return [True, "no seats"]
     except:
         return [False, "Invalid"]
-# def validSection(course_name, course_section):
-#     try:
-#         with urllib.request.urlopen("https://api.umd.io/v1/courses/" + course_name + "/sections/" + course_section) as url:
-#             data = json.loads(url.read().decode())
-#             if int(data[0]['open_seats']) > 0:
-#                 return [True, "Has open seats"]
-#             return [True, "no seats"]
-#     except:
-#         return [False, "invalid"]
+
 
 def sections(course):
     out = []
