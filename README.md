@@ -3,7 +3,7 @@ A course schedule discord bot for University of Maryland. Since the official hou
 
 ## Commands
 * !course [courseName]
-<img width="941" alt="image" src="https://user-images.githubusercontent.com/67920321/172975191-bb510aac-e35d-4325-bd21-fcfe9ff9af56.png">
+<img width="932" alt="image" src="https://user-images.githubusercontent.com/67920321/172975855-5d9bbaf8-18a7-4651-9ba4-54045be0ed68.png">
 
 * !notify [courseName]
 <img width="949" alt="image" src="https://user-images.githubusercontent.com/67920321/172975735-c09eefc1-56c5-44a3-9de9-01e4ca977da0.png">
